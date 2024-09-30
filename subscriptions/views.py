@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from subscriptions import SubscriptionForm
+from subscriptions.forms import SubscriptionForm
 
 # Create your views here.
 
