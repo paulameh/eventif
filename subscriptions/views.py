@@ -3,6 +3,7 @@ from django.shortcuts import render
 from subscriptions.forms import SubscriptionForm
 from django.core import mail
 from django.template.loader import render_to_string
+from django.contrib import messages
 
 # Create your views here.
 
@@ -19,6 +20,8 @@ def subscribe(request):
                            body, 
                             'contato@eventif.com.br', 
                             ['contato@eventif.com.br', form.cleaned_data['email']])
+            
+            messages.success(request, 'Inscrição realizada com sucesso!')
             return HttpResponseRedirect('/inscricao/')
         else:
             return render(request, 'subscriptions/subscription_form.html', {'form': form})
