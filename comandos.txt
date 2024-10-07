@@ -1,0 +1,3 @@
+Ativar ambiente de desenvolvimento: (No arquivo do projeto) source .eventif/bin/activate
+Para ativar servidor: python3 manage.py runserver
+Para executar teste: python3 manage.py test
