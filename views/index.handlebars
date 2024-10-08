@@ -1,0 +1,42 @@
+<h1>Página inicial</h1>
+
+<a href="/registro">Registrar funcionário</a>
+
+<br><br>
+    <form action="/pesquisar" method="post">
+    <label for="pesquisa">Pesquisar por funcionário</label>
+    <input type="search" name="pesquisa">
+    <input type="submit">
+</form>
+<br>
+
+<table>
+     <caption><strong>Empregados</strong></caption>
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Salario bruto</th>
+            <th>Salario líquido</th>
+            <th>Departamento</th>
+        </thead>
+
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{ id }}</td>
+                <td>{{ nome }}</td>
+                <td>{{ salario }}</td>
+                <td>{{ salarioLiq }}</td>
+                <td>{{ departamento }}</td>
+                <td><a href="/editar/{{ id }}">Editar</a> </td>
+                <td><a href="/deletar/{{ id }}">Deletar</a></td>
+
+            </tr>
+            {{/each}}
+        </tbody>
+</table>
+<br><br>
+<a href="/">Ordem de id</a><br>
+<a href="/salariosOrdem/crescente">Ordem cresecente - salario</a><br>
+<a href="/salariosOrdem/decrescente">Ordem decresecente - salario</a><br>
+<a href="/agruparDepartamentos">Agrupar por departamentos</a>

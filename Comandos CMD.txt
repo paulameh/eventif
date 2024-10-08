@@ -1,0 +1,26 @@
+-Prompt do Windows:
+Procurar arquivos: dir "nome" /s
+Sair do diretório: cd ..
+Ir para C:: cd/
+Ir para diretório: cd/Users/user/OneDrive...
+Clear: cls
+
+-- Criar o projeto, já na pasta certa: npm innit
+-- Iniciar servidor com arquivo server.js: npm start
+
+- Pacotes/Frameworks:
+Baixar o express: npm install express --save (--save para salvar no diretório)
+Baixar nodemon: npm install nodemon -g (-g salva no computador, pode ser usado em qualquer lugar)
+Instalar pacotes necessários em package.json: npm install 
+
+- Para JS no console: node
+- Para executar arquivo diretamente: na pasta, node arquivo.js
+Para conseguir o caminho absoluto do arquivo atual pelo node: executar arquivo com console.log(__filename) ou (__dirname)
+
+require("./") = import | E será executado 1 vez
+module.exports = {aaa, bbb}
+require(aaa)
+
+- Para ligar mysql com Xamps:
+1. Ligar apache e mysql
+2. localhost:/phpmyadmin
