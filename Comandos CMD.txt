@@ -24,3 +24,9 @@ require(aaa)
 - Para ligar mysql com Xamps:
 1. Ligar apache e mysql
 2. localhost:/phpmyadmin
+
+- Para git
+git init
+git remote add origin https://github.com/paulameh/Empresa---DS1.git
+git branch -M main
+git commit -m "first commit" OU git push -u origin main
