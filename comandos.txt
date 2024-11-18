@@ -1,10 +1,11 @@
 Para criar o Virtual Environment:
 - py -3.11 -m venv .venv (dentro do diretório certo, .venv é nome)
-- python3 [para linux]
+- python3 manage.py runserver
  
 Para ativar o VEnv: 
 - Windows: .venv\Scripts\activate
 - Linux: source .venv/bin/
+- source .eventif/bin/activate
 
 Para desativar:
 - deactivate
