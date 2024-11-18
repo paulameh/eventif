@@ -23,4 +23,3 @@ def contact(request):
     else:
         context = {'form': contactForm()}
         return render(request, 'contact/contact_form.html', context)
-

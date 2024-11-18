@@ -29,42 +29,15 @@ git status
 git add .
 git commit -m "mensagem"
 
-<<<<<<< HEAD
-git initcls
-git remote add origin https://github.com/paulameh/Empresa---DS1.git
-git pull https://github.com/paulameh/eventif.git main --allow-unrelated-histories
-git branch -M main
-git commit -m "first commit" OU git push -u origin main
-=======
 
 Ativar ambiente de desenvolvimento: (No arquivo do projeto) source .eventif/bin/activate
 Para ativar servidor: python3 manage.py runserver
 Para executar teste: python3 manage.py test
 
 
-depois que funcionar o negócio:
-no pythonanywhere:
-ls
-cd eventif
-git pull
+pythonanywhere:
 
-// ir em files, eventif/.env/ (passar os dados do .env do projeto para aqui)
-Trocar o Email_backend = igual ao do prof
-
-
-python manage.py test (aqui não precisa do 3)
-
-
-entrar na conta gmail, gerenciar conta do google > pesquisar senha de app > criar nome > 
-copiar senha de app gerada
-
-mudar email_user_password para a senha gerada
-
-ir para gmail em configurações, encaminhamento pop e bleh > servidor de correio enviado
-trocar o host (1info)
-trocar a porta(587)
-email_use_tls = true
-email_host_user = meu gmail
-
-ir para o web, dar reload, abrir o site
->>>>>>> b09aca94c0c6b1dccf04f56538b8f2570c450bb0
+- git pull 
+- pip install -r requirements.txt (instalar dependencias)
+- .env (verificar se é igual)
+- reload (antes de abrir site)
