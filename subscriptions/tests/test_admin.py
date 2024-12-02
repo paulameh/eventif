@@ -5,8 +5,9 @@ from unittest.mock import Mock
 class SubscriptionModelAdminTest(TestCase):
     def setUp(self):
         Subscription.objects.create(name='Cleber Fonseca', cpf='12345678901',
-                                    email='profcleberfonseca@gmail.com', phone='53-91234-5678')
+        email='profcleberfonseca@gmail.com', phone='53-91234-5678')
         self.model_admin = SubscriptionModelAdmin(Subscription, admin.site)
+        
     def test_has_action(self):
         self.assertIn('mark_as_paid', self.model_admin.actions)
 
