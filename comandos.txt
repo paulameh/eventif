@@ -1,0 +1,51 @@
+Para criar o Virtual Environment:
+- py -3.11 -m venv .venv (dentro do diretório certo, .venv é nome)
+- python3 manage.py runserver
+ 
+Para ativar o VEnv: 
+- Windows: .venv\Scripts\activate
+- Linux: source .venv/bin/
+- source .eventif/bin/activate
+
+Para desativar:
+- deactivate
+
+Para ativar servidor: 
+- py -3.11 manage.py runserver
+
+Para executar teste: 
+- py -3.11 manage.py test
+
+Para criar app:
+- py -3.11 manage.py startapp nomeApp
+
+Para instalar os requirements.txt
+- py -m pip install -r /path/to/requirements.txt
+
+
+
+Fazer commit:
+git status
+git add .
+git commit -m "mensagem"
+
+
+Ativar ambiente de desenvolvimento: (No arquivo do projeto) source .eventif/bin/activate
+Para ativar servidor: python3 manage.py runserver
+Para executar teste: python3 manage.py test
+
+
+pythonanywhere:
+
+- git pull 
+- pip install -r requirements.txt (instalar dependencias)
+- .env (verificar se é igual)
+- reload (antes de abrir site)
+
+
+Para abrir a administração do django
+- localhost:xxxx/admin
+
+
+superuser: user
+senha: a24681012
