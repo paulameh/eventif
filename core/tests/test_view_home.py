@@ -1,5 +1,5 @@
 from django.test import TestCase
-
+from django.shortcuts import resolve_url as r
 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -10,7 +10,8 @@ from subscriptions.forms import SubscriptionForm
 
 class Hometest(TestCase):
     def setUp(self):
-        self.response = self.client.get('/')
+        self.response = self.client.get(r('home'))
+
 
     def test_get(self):
         '''
@@ -25,5 +26,7 @@ class Hometest(TestCase):
         self.assertTemplateUsed(self.response, 'index.html')
 
     def test_link_subscription(self):
-        self.assertContains(self.response, 'href="/inscricao/"')
+        self.assertContains(
+            self.response, 'href="{}"'.format(r('subscriptions:new'))
+        )
     
