@@ -1,6 +1,5 @@
 from django.test import TestCase
 from django.shortcuts import resolve_url as r
-
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from subscriptions.forms import SubscriptionForm
@@ -9,6 +8,8 @@ from django.template.loader import render_to_string
 from subscriptions.forms import SubscriptionForm
 
 class Hometest(TestCase):
+    fixtures = ['keynotes.json',]
+
     def setUp(self):
         self.response = self.client.get(r('home'))
 
@@ -34,8 +35,10 @@ class Hometest(TestCase):
         contents = [
             'Grace Hopper',
             'https://abre.ai/hopper-pic',
+            'href="{}"'.format(r('speaker_detail', slug='grace-hopper')),
             'Alan Turing',
-            'https://abre.ai/turing-pic'
+            'https://abre.ai/turing-pic',
+            'href="{}"'.format(r('speaker_detail', slug='alan-turing'))
         ]
         for expected in contents:
             with self.subTest():
