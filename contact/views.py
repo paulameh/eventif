@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, resolve_url as r
 from contact.forms import contactForm
+from contact.models import Contacts
 from django.core import mail
 from django.template.loader import render_to_string
 from django.contrib import messages
@@ -8,8 +9,12 @@ from django.contrib import messages
 
 def contact(request):
     if request.method == "POST":
+        #  subscription = Subscription.objects.create(**form.cleaned_data)
         form = contactForm(request.POST)
         if form.is_valid():
+            # print("-==----==-----==-----==-------==---------==Chegou aqui")
+
+            Contacts.objects.create(**form.cleaned_data)
             mensageiro = form.cleaned_data['name']
             body = render_to_string('contact/contact_email.txt', form.cleaned_data)
             mail.send_mail(f'Mensagem de {mensageiro} para a comissão', 
